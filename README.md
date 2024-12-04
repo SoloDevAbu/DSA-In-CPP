@@ -27,7 +27,7 @@ The repository is organized into each topic and their codes
    - Recursion and Backtracking
    - Binary Search 
 
-2. **LeetCode Solutions**  
+2. **LeetCode Solutions In LeetCode directory with directory for each topic**  
    I’ve included solutions to problems I’ve solved on LeetCode. Each solution includes:  
    - Problem description.  
    - Optimized code in C++.  
