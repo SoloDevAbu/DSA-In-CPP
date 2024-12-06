@@ -35,7 +35,44 @@ Binary Search follows these steps:
 --------------------
 
 Here’s how Binary Search can be implemented iteratively:
-`   #include  #include  using namespace std;  int binarySearch(vector& arr, int target) {      int low = 0, high = arr.size() - 1;      while (low <= high) {          int mid = low + (high - low) / 2;          if (arr[mid] == target) {              return mid; // Target found          } else if (arr[mid] > target) {              high = mid - 1; // Search in the left half          } else {              low = mid + 1; // Search in the right half          }      }      return -1; // Target not found  }  int main() {      vector arr = {1, 3, 5, 7, 9, 11}; // Sorted array      int target = 5;      int index = binarySearch(arr, target);      if (index != -1) {          cout << "Target found at index: " << index << endl;      } else {          cout << "Target not found." << endl;      }      return 0;  }   `
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int binarySearch(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == target) {
+            return mid; // Target found
+        } else if (arr[mid] > target) {
+            high = mid - 1; // Search in the left half
+        } else {
+            low = mid + 1; // Search in the right half
+        }
+    }
+
+    return -1; // Target not found
+}
+
+int main() {
+    vector<int> arr = {1, 3, 5, 7, 9, 11}; // Sorted array
+    int target = 5;
+
+    int index = binarySearch(arr, target);
+    if (index != -1) {
+        cout << "Target found at index: " << index << endl;
+    } else {
+        cout << "Target not found." << endl;
+    }
+
+    return 0;
+}
+```
 
 **Key Characteristics**
 -----------------------
